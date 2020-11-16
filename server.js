@@ -398,7 +398,7 @@ async function initialize_new_browser_connection(ws) {
 
         const new_browserproxy = await Bots.create({
             'id': uuid.v4(),
-            'name': 'Untitled Bot',
+            'name': auth_result['display_name'] ? auth_result['display_name'] : 'Untitled Bot',
             'browser_id': browser_id,
             'proxy_username': new_username,
             'proxy_password': new_password,
